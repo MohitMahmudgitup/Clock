@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clock</title>
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+    <section>
+        <div class="allClock">
+            <div class="allHMS">
+                <h2 id="hoursClass" class="same">00</h2>
+                <p>Clock</p>
+            </div>
+            <div class="allHMS">
+                <h2 id="minClass" class="same">00</h2>
+                <p>Min</p>
+            </div>
+            <div class="allHMS">
+                <h2 id="secClass"class="same">00</h2>
+                <p>Sec</p>
+            </div>
+        </div>
+    </section>
+    <script>
+        let hours = document.getElementById("hoursClass")
+        let min = document.getElementById("minClass")
+        let sec = document.getElementById("secClass")
+        setInterval(()=>{
+            let currentTime = new Date()
+
+hours.innerHTML = currentTime.getHours()
+min.innerHTML = currentTime.getMinutes()
+sec.innerHTML = currentTime.getSeconds()
+
+        },1000)
+
+       
+    </script>
+</body>
+
+</html>
